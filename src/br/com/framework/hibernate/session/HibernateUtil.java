@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
@@ -14,13 +15,14 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.engine.SessionFactoryImplementor;
 import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
 
 /**
  * 
  * Responsavel por estabelecer conexão com o hibernate
  * @author felippe
  */ 
+
+@ApplicationScoped
 public class HibernateUtil implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
